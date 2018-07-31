@@ -13,6 +13,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 
+import yourteamnumber.com.seshealthdoctor.Fragments.HomeFragment;
+import yourteamnumber.com.seshealthdoctor.Fragments.PairPatientFragment;
 import yourteamnumber.com.seshealthdoctor.R;
 
 
@@ -100,7 +102,19 @@ public class MainActivity extends AppCompatActivity {
                         // Using a switch to see which item on the menu was clicked
                         switch (menuItem.getItemId()) {
                             // You can find these id's at: res -> menu -> drawer_view.xml
-
+                            case R.id.home_button:
+                                if (currentState != MenuStates.HOME_PAGE){
+                                    ChangeFragment(new HomeFragment());
+                                    currentState = MenuStates.HOME_PAGE;
+                                }
+                                break;
+                            case R.id.npair_patient_nav:
+                                if(currentState != MenuStates.PAIR_PATIENT){
+                                    ChangeFragment(new PairPatientFragment());
+                                    currentState = MenuStates.PAIR_PATIENT;
+                                }
+                                break;
+                                //TODO: Left here
                         }
 
                         return true;
@@ -139,8 +153,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Add the default Fragment once the user logged in
         FragmentTransaction ft = fragmentManager.beginTransaction();
-        // TODO: Add the fragment that is needed here as an introduction
-        //ft.add(R.id.fragment_container, new PatientInformationFragment());
+        ft.add(R.id.fragment_container, new HomeFragment());
         ft.commit();
 
     }

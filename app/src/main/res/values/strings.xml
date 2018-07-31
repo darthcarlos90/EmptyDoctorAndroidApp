@@ -11,4 +11,7 @@
     <string name="view_packet_txt">View Packet</string>
     <string name="send_feedback_txt">Send Feedback</string>
     <string name="send_location_nav">Send Location</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
