@@ -48,6 +48,12 @@ public class MainActivity extends AppCompatActivity {
     private static String TAG = "MainActivity";
 
 
+    private enum MenuStates {
+        PAIR_PATIENT, RECEIVE_DATA, VIEW_PACKETS, SEND_FEEDBACK, SEND_LOCATIONS, HOME_PAGE
+    }
+
+    private MenuStates currentState;
+
 
 
 
@@ -55,6 +61,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // the default fragment on display is the patient information
+//        currentState = MenuStates.HOME_PAGE;
+//
+//        // go look for the main drawer layout
+//        mDrawerLayout = findViewById(R.id.main_drawer_layout);
+//
+//        toolbar = findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
     }
 
 

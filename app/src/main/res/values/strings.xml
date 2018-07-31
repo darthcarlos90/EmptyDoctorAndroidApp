@@ -5,4 +5,10 @@
     <string name="email_example_com">email@example.com</string>
     <string name="password_txt">Password</string>
     <string name="log_in_txt">Log In</string>
+    <string name="home_txt">Home</string>
+    <string name="pair_patient_txt">Pair Patient</string>
+    <string name="receive_data_txt">Receive Data</string>
+    <string name="view_packet_txt">View Packet</string>
+    <string name="send_feedback_txt">Send Feedback</string>
+    <string name="send_location_nav">Send Location</string>
 </resources>

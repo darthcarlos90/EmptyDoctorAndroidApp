@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home_button"
+            android:title="@string/home_txt" />
+        <item
+            android:id="@+id/npair_patient_nav"
+            android:title="@string/pair_patient_txt" />
+        <item
+            android:id="@+id/receive_datanav"
+            android:title="@string/receive_data_txt" />
+        <item
+            android:id="@+id/view_packet_nav"
+            android:title="@string/view_packet_txt" />
+        <item
+            android:id="@+id/send_feedback_nav"
+            android:title="@string/send_feedback_txt" />
+
+        <item
+            android:id="@+id/send_location_nav"
+            android:title="@string/send_location_nav" />
+    </group>
+</menu>
