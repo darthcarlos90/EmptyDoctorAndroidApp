@@ -15,6 +15,10 @@ import android.view.View;
 
 import yourteamnumber.com.seshealthdoctor.Fragments.HomeFragment;
 import yourteamnumber.com.seshealthdoctor.Fragments.PairPatientFragment;
+import yourteamnumber.com.seshealthdoctor.Fragments.ReceiveDataFragment;
+import yourteamnumber.com.seshealthdoctor.Fragments.SendFeedbackFragment;
+import yourteamnumber.com.seshealthdoctor.Fragments.SendLocationFragment;
+import yourteamnumber.com.seshealthdoctor.Fragments.ViewPacketFragment;
 import yourteamnumber.com.seshealthdoctor.R;
 
 
@@ -28,9 +32,6 @@ import yourteamnumber.com.seshealthdoctor.R;
  * some changes.
  */
 public class MainActivity extends AppCompatActivity {
-
-
-
 
 
     /**
@@ -62,8 +63,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private MenuStates currentState;
-
-
 
 
     @Override
@@ -103,20 +102,42 @@ public class MainActivity extends AppCompatActivity {
                         switch (menuItem.getItemId()) {
                             // You can find these id's at: res -> menu -> drawer_view.xml
                             case R.id.home_button:
-                                if (currentState != MenuStates.HOME_PAGE){
+                                if (currentState != MenuStates.HOME_PAGE) {
                                     ChangeFragment(new HomeFragment());
                                     currentState = MenuStates.HOME_PAGE;
                                 }
                                 break;
                             case R.id.npair_patient_nav:
-                                if(currentState != MenuStates.PAIR_PATIENT){
+                                if (currentState != MenuStates.PAIR_PATIENT) {
                                     ChangeFragment(new PairPatientFragment());
                                     currentState = MenuStates.PAIR_PATIENT;
                                 }
                                 break;
-                                //TODO: Left here
+                            case R.id.receive_datanav:
+                                if (currentState != MenuStates.RECEIVE_DATA) {
+                                    ChangeFragment(new ReceiveDataFragment());
+                                    currentState = MenuStates.RECEIVE_DATA;
+                                }
+                                break;
+                            case R.id.view_packet_nav:
+                                if (currentState != MenuStates.VIEW_PACKETS) {
+                                    ChangeFragment(new ViewPacketFragment());
+                                    currentState = MenuStates.VIEW_PACKETS;
+                                }
+                                break;
+                            case R.id.send_feedback_nav:
+                                if (currentState != MenuStates.SEND_FEEDBACK) {
+                                    ChangeFragment(new SendFeedbackFragment());
+                                    currentState = MenuStates.SEND_FEEDBACK;
+                                }
+                                break;
+                            case R.id.send_location_nav:
+                                if (currentState != MenuStates.SEND_LOCATIONS) {
+                                    ChangeFragment(new SendLocationFragment());
+                                    currentState = MenuStates.SEND_LOCATIONS;
+                                }
+                                break;
                         }
-
                         return true;
                     }
                 });
@@ -182,6 +203,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * This function allows to change the content of the Fragment holder
+     *
      * @param fragment The fragment to be displayed
      */
     private void ChangeFragment(Fragment fragment) {
